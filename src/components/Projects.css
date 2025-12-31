@@ -1,0 +1,120 @@
+.projects-section {
+  padding: 80px 10% 60px 10%;
+  background: linear-gradient(to bottom right, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 25px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.12), 0 1.5px 4px rgba(44, 201, 255, 0.16);
+  margin: 60px 0;
+  animation: fadeIn 1s ease forwards;
+  opacity: 0;
+  animation-delay: 0.5s;
+}
+
+.projects-section h2 {
+  text-align: center;
+  font-size: 36px;
+  color: #09547c;
+  margin-bottom: 48px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  animation: fadeInDown 1s ease forwards;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project {
+  background: linear-gradient(to bottom right, #ffffff 0%, #f5f5f5 100%);
+  border-left: 7px solid #0ef;
+  border-radius: 18px;
+  padding: 40px 32px 32px 40px;
+  box-shadow: 0 4px 24px rgba(30, 205, 255, 0.07);
+  transition: transform 0.3s, box-shadow 0.3s;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.project:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 8px 32px rgba(0, 212, 255, 0.15);
+  border-left: 7px solid #00d4ff;
+}
+
+.project h3 {
+  color: #222f3e;
+  font-size: 24px;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.project h3 a {
+  text-decoration: none;
+  color: #0084ff;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.project h3 a:hover {
+  color: #0052cc;
+  text-shadow: 0 0 8px rgba(0, 132, 255, 0.3);
+}
+
+.project p {
+  color: #595959;
+  font-size: 16px;
+  line-height: 1.7;
+  flex-grow: 1;
+  margin-bottom: 20px;
+}
+
+.project a[target="_blank"] {
+  display: inline-block;
+  padding: 10px 16px;
+  background: linear-gradient(135deg, #0084ff 0%, #0052cc 100%);
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  width: fit-content;
+}
+
+.project a[target="_blank"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 132, 255, 0.3);
+  background: linear-gradient(135deg, #0052cc 0%, #0084ff 100%);
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+@keyframes fadeInDown {
+  from { transform: translateY(-40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@media (max-width: 900px) {
+  .projects-section {
+    padding: 30px 3vw;
+  }
+  .project {
+    padding: 20px 10px;
+  }
+  .projects-section h2 {
+    font-size: 27px;
+  }
+  .project h3 {
+    font-size: 19px;
+  }
+  .project p {
+    font-size: 15px;
+  }
+}
