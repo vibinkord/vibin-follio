@@ -1,22 +1,20 @@
 "use client";
 
-import React from "react";
 import { motion } from "framer-motion";
+import type { Variants } from "framer-motion";
 
 interface TextHoverEffectProps {
   text: string;
-  duration?: number;
   perCharDelay?: number;
 }
 
 export const TextHoverEffect = ({
   text,
-  duration = 0.5,
   perCharDelay = 0.02,
 }: TextHoverEffectProps) => {
   const letters = text.split("");
 
-  const container = {
+  const container: Variants = {
     hidden: { opacity: 0 },
     visible: (custom: number) => ({
       opacity: 1,
@@ -27,7 +25,7 @@ export const TextHoverEffect = ({
     }),
   };
 
-  const child = {
+  const child: Variants = {
     hidden: {
       opacity: 0,
       y: 10,
