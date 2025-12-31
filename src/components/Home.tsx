@@ -24,11 +24,11 @@ const Home = () => {
         <br />
         <div className="socialmedia">
           <a href="https://www.instagram.com/vibin_kord" target="_blank" rel="noopener noreferrer">
-            <img src="instagram.png" alt="Instagram" className="img" />
+            <img src="/images/instagram.png" alt="Instagram" className="img" />
           </a>
 
           <a href="https://github.com/vibinkord" target="_blank" rel="noopener noreferrer">
-            <img src="gitlogo.png" alt="GitHub" className="img" />
+            <img src="/images/gitlogo.png" alt="GitHub" className="img" />
           </a>
 
           <a
@@ -36,12 +36,12 @@ const Home = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="linkedin.png" alt="LinkedIn" className="img" />
+            <img src="/images/linkedin.png" alt="LinkedIn" className="img" />
           </a>
         </div>
       </div>
       <div className="home-img">
-        <img src="resume pic.jpg" alt="Vibin Richard" />
+        <img src="/images/profile.png" alt="Vibin Richard" className="profile-image" />
       </div>
     </section>
   )
