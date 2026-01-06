@@ -3,6 +3,12 @@ import './Projects.css'
 const Projects = () => {
   const projects = [
     {
+      title: 'AI-Based Resume Analyser',
+      description:
+        'Built an AI-powered resume analyser that scores resumes against job descriptions and highlights missing keywords. Streamlines candidate screening with quick, consistent insights.',
+      link: 'https://github.com/vibinkord/Ai-based-ResumeAnalyzer',
+    },
+    {
       title: 'Language Translator Platform',
       description:
         'Developed a web-based translation solution bridging Tamil and English for academic, professional, and daily needs. Features real-time translation, categorized options, voice input, and personalized learning tools. Built for scalability, security, and future AI-powered enhancements.',
