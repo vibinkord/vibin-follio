@@ -9,6 +9,12 @@ const Projects = () => {
       link: 'https://github.com/vibinkord/Ai-based-ResumeAnalyzer',
     },
     {
+      title: 'Student Management System',
+      description:
+        'Full-stack student dashboard with Flask API and React frontend covering auth, attendance, marks, subjects, notes, and role-based dashboards for admins, staff, and students. Includes Docker setup and scripts for local or containerized runs.',
+      link: 'https://github.com/vibinkord/Student-dashboard',
+    },
+    {
       title: 'Language Translator Platform',
       description:
         'Developed a web-based translation solution bridging Tamil and English for academic, professional, and daily needs. Features real-time translation, categorized options, voice input, and personalized learning tools. Built for scalability, security, and future AI-powered enhancements.',
