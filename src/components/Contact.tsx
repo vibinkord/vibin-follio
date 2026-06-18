@@ -5,7 +5,7 @@ const Contact = () => {
     <section className="contact-section" id="contact">
       <h2 className="contact-title">Get in Touch</h2>
       <p className="contact-subtitle">
-        Feel free to reach out for projects, collaborations, or opportunities.
+        Open to Software Engineering, Backend Development, Full Stack Development, Internship, and collaborative opportunities.
       </p>
 
       <div className="contact-grid">
@@ -30,11 +30,11 @@ const Contact = () => {
           <h3>Location</h3>
           <p>
             <a
-              href="https://www.google.com/maps/place/SRI+SHAKTHI+INSTITUTE+OF+ENGINEERING+AND+TECHNOLOGY/"
+              href="https://www.google.com/maps/place/Coimbatore,+Tamil+Nadu,+India/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Sri Shakthi Institute of Engineering and Technology
+              Coimbatore, Tamil Nadu, India
             </a>
           </p>
         </div>

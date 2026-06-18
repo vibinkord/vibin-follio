@@ -34,10 +34,19 @@
   animation-delay: 1s;
   cursor: pointer;
   display: inline-block;
+  background: linear-gradient(90deg, #0ef, #8a2be2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px rgba(0, 239, 255, 0.1);
 }
 
 #name:hover {
-  color: rgb(146, 59, 226);
+  filter: drop-shadow(0 0 10px rgba(138, 43, 226, 0.6));
+}
+
+.home-img {
+  animation: float 6s ease-in-out infinite;
+  animation-delay: 1s;
 }
 
 .home-img img {
@@ -47,6 +56,12 @@
   opacity: 0;
   animation: zoomIn 1s ease forwards;
   animation-delay: 1s;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
 }
 
 .profile-image {
@@ -105,4 +120,53 @@
     width: 200px;
     height: 200px;
   }
+}
+
+.animated-role {
+  color: #0ef;
+  display: inline-block;
+  animation: fadeInOut 3s infinite;
+}
+
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0; transform: translateY(5px); }
+  15%, 85% { opacity: 1; transform: translateY(0); }
+}
+
+.cta-buttons {
+  opacity: 0;
+  animation: slideBottom 1s ease forwards;
+  animation-delay: 1.2s;
+  flex-wrap: wrap;
+}
+
+.cta-btn {
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 16px;
+}
+
+.cta-btn.primary {
+  background-color: #0ef;
+  color: #000;
+  box-shadow: 0 0 10px rgba(0, 239, 255, 0.5);
+}
+
+.cta-btn.primary:hover {
+  box-shadow: 0 0 20px rgba(0, 239, 255, 0.8);
+  transform: translateY(-2px);
+}
+
+.cta-btn.outline {
+  background-color: transparent;
+  color: #0ef;
+  border: 2px solid #0ef;
+}
+
+.cta-btn.outline:hover {
+  background-color: rgba(0, 239, 255, 0.1);
+  transform: translateY(-2px);
 }

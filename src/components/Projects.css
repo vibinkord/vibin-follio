@@ -1,8 +1,7 @@
 .projects-section {
   padding: 80px 10% 60px 10%;
-  background: linear-gradient(to bottom right, #f5f7fa 0%, #c3cfe2 100%);
+  background: transparent;
   border-radius: 25px;
-  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.12), 0 1.5px 4px rgba(44, 201, 255, 0.16);
   margin: 60px 0;
   animation: fadeIn 1s ease forwards;
   opacity: 0;
@@ -12,7 +11,7 @@
 .projects-section h2 {
   text-align: center;
   font-size: 36px;
-  color: #09547c;
+  color: #e2e8f0;
   margin-bottom: 48px;
   letter-spacing: 2px;
   font-weight: 700;
@@ -22,18 +21,20 @@
 .projects-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 10px;
+  gap: 20px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .project {
-  background: linear-gradient(to bottom right, #ffffff 0%, #f5f5f5 100%);
+  background: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
   border-left: 7px solid #0ef;
   border-radius: 18px;
   padding: 40px 32px 32px 40px;
-  box-shadow: 0 4px 24px rgba(30, 205, 255, 0.07);
-  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s, border-left-color 0.3s;
   min-height: 320px;
   display: flex;
   flex-direction: column;
@@ -41,55 +42,55 @@
 }
 
 .project:hover {
-  transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 8px 32px rgba(0, 212, 255, 0.15);
-  border-left: 7px solid #00d4ff;
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 15px 40px rgba(0, 239, 255, 0.15);
+  border-left: 7px solid #8a2be2;
+  background: rgba(30, 41, 59, 0.9);
 }
 
-.project h3 {
-  color: #222f3e;
+.project h3, .archive-project h4 {
   font-size: 24px;
   margin-bottom: 15px;
   font-weight: 700;
 }
 
-.project h3 a {
+.project h3 a, .archive-project h4 a {
   text-decoration: none;
-  color: #0084ff;
+  color: #0ef;
   transition: all 0.3s ease;
   display: inline-block;
 }
 
-.project h3 a:hover {
-  color: #0052cc;
-  text-shadow: 0 0 8px rgba(0, 132, 255, 0.3);
+.project h3 a:hover, .archive-project h4 a:hover {
+  color: #8a2be2;
+  text-shadow: 0 0 10px rgba(138, 43, 226, 0.4);
 }
 
-.project p {
-  color: #595959;
+.project p, .archive-project p {
+  color: #94a3b8;
   font-size: 16px;
   line-height: 1.7;
   flex-grow: 1;
   margin-bottom: 20px;
 }
 
-.project a[target="_blank"] {
+.project a[target="_blank"], .archive-project a[target="_blank"] {
   display: inline-block;
   padding: 10px 16px;
-  background: linear-gradient(135deg, #0084ff 0%, #0052cc 100%);
-  color: white;
+  background: linear-gradient(135deg, #0ef 0%, #8a2be2 100%);
+  color: #ffffff;
   border-radius: 6px;
   text-decoration: none;
   font-weight: 600;
   transition: all 0.3s ease;
-  border: 2px solid transparent;
+  border: none;
   width: fit-content;
 }
 
-.project a[target="_blank"]:hover {
+.project a[target="_blank"]:hover, .archive-project a[target="_blank"]:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 16px rgba(0, 132, 255, 0.3);
-  background: linear-gradient(135deg, #0052cc 0%, #0084ff 100%);
+  box-shadow: 0 8px 16px rgba(0, 239, 255, 0.3);
+  background: linear-gradient(135deg, #8a2be2 0%, #0ef 100%);
 }
 
 @keyframes fadeIn {
@@ -111,10 +112,57 @@
   .projects-section h2 {
     font-size: 27px;
   }
-  .project h3 {
+  .project h3, .archive-project h4 {
     font-size: 19px;
   }
-  .project p {
+  .project p, .archive-project p {
     font-size: 15px;
   }
+}
+
+.tech-stack-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+  margin-bottom: 12px;
+}
+
+.tech-badge {
+  background: rgba(14, 165, 233, 0.1);
+  border: 1px solid rgba(14, 165, 233, 0.3);
+  color: #0ea5e9;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.tech-stack-badges.small .tech-badge {
+  padding: 2px 8px;
+  font-size: 0.75rem;
+}
+
+.archive-grid {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.archive-project {
+  padding: 20px;
+  min-height: auto;
+}
+
+.archive-project h4 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.archive-project p {
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+.mt-16 {
+  margin-top: 4rem;
 }
