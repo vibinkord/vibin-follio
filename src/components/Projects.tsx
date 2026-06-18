@@ -3,6 +3,12 @@ import './Projects.css'
 const Projects = () => {
   const projects = [
     {
+      title: 'DEV.STATION – AI-Powered Developer Intelligence Platform',
+      description:
+        'A comprehensive AI-powered platform designed to help software developers track, analyze, and accelerate career growth. It integrates data from professional profiles, coding platforms, and resumes to create a unified developer intelligence dashboard. Leverages AI to evaluate coding proficiency and resume quality, providing personalized analytics, actionable insights, and automated feedback to help developers identify skill gaps and prepare for career opportunities.',
+      link: 'https://github.com/vibinkord/developer-dashboard-main-',
+    },
+    {
       title: 'AI-Based Resume Analyser',
       description:
         'Built an AI-powered resume analyser that scores resumes against job descriptions and highlights missing keywords. Streamlines candidate screening with quick, consistent insights.',
